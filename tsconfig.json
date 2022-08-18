@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "module": "commonjs",
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "dist",
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "strict": true,
+        "target": "es6",
+        "sourceMap": false,
+        "noEmitOnError": true,
+        "typeRoots": [ "node_modules/@types", "src/types" ]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+    ]
+}
+
+
+// {
+//     "compilerOptions": {
+//       "jsx": "react-jsx",
+//       "resolveJsonModule": true,
+//       "rootDirs": [
+//         "src",
+//         "assets"
+//       ],
+//       "skipLibCheck": true,
+//       "strict": true,
+//       "target": "es2020",
+//       "lib": ["es2020", "dom"],
+//     },
+// }
+  
