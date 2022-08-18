@@ -1,1 +1,0 @@
-(()=>{"use strict";for(var o=0;o<1;o++)console.log(o);for(var r=0;r<1;r++)console.log(r);for(var l=0;l<1;l++)console.log(l)})();
