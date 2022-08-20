@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+      "alwaysStrict": true,
+      "esModuleInterop": true,
+      "module": "commonjs",
+      "noImplicitReturns": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "outDir": "dist",
+      "resolveJsonModule": true,
+      "rootDir": "src",
+      "skipLibCheck": true,
+      "strict": true,
+      "target": "es6",
+      "sourceMap": false,
+      "noEmitOnError": true,
+      "typeRoots": [ "node_modules/@types" ]
+  },
+  "exclude": [
+      "node_modules"
+  ],
+  "include": [
+      "src/**/*.ts",
+  ]
+}
