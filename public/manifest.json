@@ -4,10 +4,21 @@
     "name": "yd-extension",
     "description": "Help using yd-downloader-client",
     "version": "0.1.0",
+
+    "commands": {
+        "test-command": {
+            "suggested_key": {
+              "default": "Ctrl + Shift + E"
+            },
+            "description": "Run on the current page."
+        }
+    },
   
     "options_ui": {
         "page": "options.html"
     },
+
+    "devtools_page": "devtools.html",
   
     "action": {
         "default_icon": "icon.png",
@@ -26,7 +37,10 @@
     },
   
     "permissions": [
-        "storage"
+        "storage",
+        "tabs",
+        "scripting",
+        "activeTab"
     ],
   
     "host_permissions": [
