@@ -1,61 +1,12 @@
-let i = 1;
+/**
+ * dom조작 -> content script
+ * 그래서 ext를 tsx로 준거
+ */
 
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
+const dom = (s: any) => {
+  const b = document.querySelector('body');
+  console.log(s);
+  console.log(b);
+};
 
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
-
-for (let j = 0; j < i; j++){
-    console.log(j)
-}
+dom('Control your dom in content script');
