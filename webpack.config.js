@@ -18,8 +18,9 @@ module.exports = (env, argv) => {
 
   return {
     mode: prod ? 'production' : 'development',
-    // devtool: 'inline-source-map',(dev)
-    // devtool: prod ? "hidden-source-map" : "eval",
+    // devtool: 'inline-source-map',
+    // devtool: prod ? 'hidden-source-map' : 'eval',
+    // devtool: false,
     entry: {
       popup: path.join(srcDir, 'popup.tsx'),
       options: path.join(srcDir, 'options.tsx'),
@@ -32,9 +33,18 @@ module.exports = (env, argv) => {
       // filename: "bundle.min.js",
       filename: '[name].js',
     },
+    /**
+     * @TODO
+     * Webpack: size exceeds the recommended limit (244 KiB)
+     */
+    performance: {
+      hints: false,
+    },
     optimization: {
       splitChunks: {
         name: 'vendor',
+        // minSize: 10000,
+        // maxSize: 250000,
         chunks(chunk) {
           return chunk.name !== 'background';
         },
