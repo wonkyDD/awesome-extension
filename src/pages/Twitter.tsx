@@ -1,23 +1,26 @@
 /**
  * @TODO
- * 애초에 웹에서 들어가기 전에
- * 영상 카드뷰에서 필터링이 필요하지 않나?
+ * 1. 실시간을 누르는 순간, 필터링 api를 요청
+ *  - 현재 동영상 링크를 다 읽어서 보낸다
+ *  - backend에서 다운로드 테이블을 검사
+ *  - get할때 보내온 링크리스트들과 비교
+ *  - 다운로드 된 애들의 경우 제거
+ *  - 다운로드 안된놈들의 링크만 담아서 응답
  *
- * 1. [DB] <--> Extension
- * 2. Desktop + Android
+ * 2. content_twitter.tsx에서 ...
+ *  - 방안 a) 1에서 받아온 정보를 바탕으로 화면을 다시 그림
+ *  - 방안 b) 정보로 바로 새탭을 쫘르륵 열어버리기
  *
- * Desktop:
- * 백그라운드에 돌리면서 ec2에서 get을 해오고
- * notification을 하는 역할
+ * 3. video 화면
+ *  - video.twing.com 형식에대해 content_twitter.tsx가 팝업 div를 띄움
+ *  - 팝업 div에는 Yes와 No가 있고
+ *  - 각각에는 eventlistener가 있어서 keydown으로 y, n이 매칭
+ *  - n이 입력시 탭을 닫고, y를 입력시 다운로드 api를 요청
  *
- * Extension:
- * 내가 다운받은 목록을 sqlite에 저장해두고
- * 있는 것들은 전부 필터링해서 안보이게!
- * (중복저장구분이 너무 힘들다)
- *
- * Desktop은 현재 Extension을 완벽하게 대체할 수 있다.
- * 추가적으로 android 앱까지 받쳐주면 커버리지가 정말 높아질 거다.
- * 다만 개발기간이 보장이 안돼있으니까 임시방편으로 Extension을 먼저하는것.
+ * 4.
+ *  - n,y 모두 s3에 등록하기위한 api를 또 요청해줘야한다
+ *  - y를 눌렀을때는 :누르고 다운로드 누르는 동작을
+ *  content_twitter.tsx가 해줘야한다
  */
 
 import React from 'react';
