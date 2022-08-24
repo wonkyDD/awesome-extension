@@ -1,7 +1,7 @@
 {
-  // "files.exclude": {
-  //     "node_modules": true
-  // },
+  "files.exclude": {
+      "**/node_modules": true
+  },
   "editor.formatOnSave": false,
   "[typescript]": {
       "editor.formatOnSave": true
